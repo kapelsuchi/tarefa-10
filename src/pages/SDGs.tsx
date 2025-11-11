@@ -68,7 +68,7 @@ const SDGs = () => {
                 ODSs da ONU
               </h1>
               <p className="text-lg text-muted-foreground">
-                Conheça as Metas de Desenvolvimento Sustentável com as quais a Recycle está alinhada 
+                Conheça as Metas de Desenvolvimento Sustentável com as quais a EcoRecicla está alinhada 
                 e como contribuímos para um futuro melhor.
               </p>
             </div>
@@ -85,7 +85,7 @@ const SDGs = () => {
               <p className="text-lg text-muted-foreground">
                 As 17 Metas de Desenvolvimento Sustentável (ODSs) da ONU são um apelo universal para 
                 acabar com a pobreza, proteger o planeta e garantir que todas as pessoas desfrutem de 
-                paz e prosperidade até 2030. A Recycle está comprometida com 6 dessas metas.
+                paz e prosperidade até 2030. A EcoRecicla está comprometida com 6 dessas metas.
               </p>
             </div>
           </div>
@@ -98,15 +98,15 @@ const SDGs = () => {
               {sdgs.map((sdg) => (
                 <Card 
                   key={sdg.number} 
-                  className="border-2 hover:border-secondary transition-all duration-300 hover-lift gradient-card"
+                  className="border-2 hover:border-primary transition-all duration-300 hover:shadow-medium hover:-translate-y-1"
                 >
                   <CardContent className="p-8 space-y-6">
                     <div className="flex items-start gap-4">
-                      <div className={`${sdg.color} w-16 h-16 rounded-xl shadow-medium flex items-center justify-center flex-shrink-0`}>
+                      <div className={`${sdg.color} w-16 h-16 rounded-lg flex items-center justify-center flex-shrink-0`}>
                         <sdg.icon className="h-8 w-8 text-white" />
                       </div>
                       <div>
-                        <div className="text-sm font-semibold bg-clip-text text-transparent gradient-secondary mb-1">
+                        <div className="text-sm font-semibold text-muted-foreground mb-1">
                           ODS {sdg.number}
                         </div>
                         <h3 className="text-xl font-bold">{sdg.title}</h3>
@@ -120,7 +120,7 @@ const SDGs = () => {
                       </div>
                       
                       <div className="pt-4 border-t border-border">
-                        <h4 className="font-semibold mb-2 bg-clip-text text-transparent gradient-secondary">Nossa Contribuição:</h4>
+                        <h4 className="font-semibold mb-2 text-primary">Nossa Contribuição:</h4>
                         <p className="text-muted-foreground">{sdg.ourContribution}</p>
                       </div>
                     </div>

@@ -61,7 +61,7 @@ const Machine = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center space-y-6 animate-slide-up">
               <h1 className="text-4xl md:text-5xl font-bold">
-                A Máquina Recycle
+                A Máquina EcoRecicla
               </h1>
               <p className="text-lg text-muted-foreground">
                 Tecnologia de ponta que torna a reciclagem simples, rápida e recompensadora. 
@@ -77,8 +77,8 @@ const Machine = () => {
             <div className="max-w-4xl mx-auto">
               <img 
                 src={machineImage} 
-                alt="Detalhes da máquina Recycle"
-                className="rounded-2xl shadow-glow w-full hover-lift"
+                alt="Detalhes da máquina EcoRecicla"
+                className="rounded-2xl shadow-strong w-full"
               />
             </div>
           </div>
@@ -100,11 +100,11 @@ const Machine = () => {
               {specs.map((spec, index) => (
                 <Card 
                   key={index} 
-                  className="border-2 hover:border-secondary transition-all duration-300 hover-lift gradient-card"
+                  className="border-2 hover:border-primary transition-all duration-300 hover:shadow-medium"
                 >
                   <CardContent className="p-6 space-y-4">
-                    <div className="w-12 h-12 rounded-xl gradient-accent flex items-center justify-center shadow-subtle">
-                      <spec.icon className="h-6 w-6 text-white" />
+                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                      <spec.icon className="h-6 w-6 text-primary" />
                     </div>
                     <h3 className="text-xl font-semibold">{spec.title}</h3>
                     <p className="text-muted-foreground">{spec.description}</p>
@@ -130,9 +130,9 @@ const Machine = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
               {howItWorks.map((item, index) => (
                 <div key={index} className="relative">
-                  <Card className="h-full border-2 hover:border-secondary transition-all duration-300 hover-lift gradient-card">
+                  <Card className="h-full border-2 hover:border-primary transition-all duration-300">
                     <CardContent className="p-6 space-y-4">
-                      <div className="w-16 h-16 rounded-full gradient-secondary text-white shadow-subtle flex items-center justify-center text-2xl font-bold">
+                      <div className="w-16 h-16 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-2xl font-bold">
                         {item.step}
                       </div>
                       <h3 className="text-xl font-semibold">{item.title}</h3>
@@ -141,7 +141,7 @@ const Machine = () => {
                   </Card>
                   {index < howItWorks.length - 1 && (
                     <div className="hidden lg:block absolute top-1/2 -right-3 w-6 h-6">
-                      <div className="w-0 h-0 border-t-8 border-t-transparent border-l-12 border-l-secondary border-b-8 border-b-transparent"></div>
+                      <div className="w-0 h-0 border-t-8 border-t-transparent border-l-12 border-l-primary border-b-8 border-b-transparent"></div>
                     </div>
                   )}
                 </div>

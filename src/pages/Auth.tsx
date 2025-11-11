@@ -69,15 +69,15 @@ const Auth = () => {
     <div className="min-h-screen flex items-center justify-center gradient-hero p-4">
       <div className="w-full max-w-md space-y-6">
         <Link to="/" className="flex items-center justify-center gap-2 group">
-          <div className="rounded-xl bg-gradient-primary p-3 transition-all group-hover:scale-110 shadow-glow">
-            <Recycle className="h-8 w-8 text-white" />
+          <div className="rounded-lg bg-primary p-2 transition-transform group-hover:scale-110">
+            <Recycle className="h-8 w-8 text-primary-foreground" />
           </div>
           <span className="text-2xl font-bold bg-clip-text text-transparent gradient-primary">
-            Recycle
+            EcoRecicla
           </span>
         </Link>
 
-        <Card className="border-2 shadow-glow gradient-card">
+        <Card className="border-2 shadow-strong">
           <CardHeader className="text-center">
             <CardTitle className="text-2xl">Bem-vindo!</CardTitle>
             <CardDescription>
@@ -125,7 +125,7 @@ const Auth = () => {
                     />
                   </div>
 
-                  <Button type="submit" className="w-full gradient-secondary shadow-medium hover:shadow-glow" disabled={isLoading}>
+                  <Button type="submit" className="w-full" disabled={isLoading}>
                     {isLoading ? "Entrando..." : "Entrar"}
                   </Button>
                 </form>
@@ -200,7 +200,7 @@ const Auth = () => {
                     />
                   </div>
 
-                  <Button type="submit" className="w-full gradient-secondary shadow-medium hover:shadow-glow" disabled={isLoading}>
+                  <Button type="submit" className="w-full" disabled={isLoading}>
                     {isLoading ? "Criando conta..." : "Criar Conta"}
                   </Button>
                 </form>

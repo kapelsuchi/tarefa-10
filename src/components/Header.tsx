@@ -23,11 +23,11 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           <Link to="/" className="flex items-center gap-2 group">
-            <div className="rounded-xl bg-gradient-primary p-2.5 transition-all group-hover:scale-110 shadow-medium group-hover:shadow-glow">
-              <Recycle className="h-6 w-6 text-white" />
+            <div className="rounded-lg bg-primary p-2 transition-transform group-hover:scale-110">
+              <Recycle className="h-6 w-6 text-primary-foreground" />
             </div>
             <span className="text-xl font-bold bg-clip-text text-transparent gradient-primary">
-              Recycle
+              EcoRecicla
             </span>
           </Link>
 
@@ -48,7 +48,7 @@ const Header = () => {
               </Link>
             ))}
             <Link to="/auth">
-              <Button className="ml-4 gradient-secondary shadow-medium hover:shadow-glow">
+              <Button variant="default" className="ml-4">
                 Entrar
               </Button>
             </Link>
@@ -87,7 +87,7 @@ const Header = () => {
                 </Link>
               ))}
               <Link to="/auth" onClick={() => setIsMenuOpen(false)}>
-                <Button className="w-full gradient-secondary shadow-medium">
+                <Button variant="default" className="w-full">
                   Entrar
                 </Button>
               </Link>

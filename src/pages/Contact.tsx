@@ -46,8 +46,8 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      content: "contato@recycle.com",
-      link: "mailto:contato@recycle.com",
+      content: "contato@ecorecicla.com",
+      link: "mailto:contato@ecorecicla.com",
     },
     {
       icon: Phone,
@@ -88,16 +88,16 @@ const Contact = () => {
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12">
               {contactInfo.map((info, index) => (
-                <Card key={index} className="border-2 hover:border-secondary transition-all duration-300 hover-lift gradient-card">
+                <Card key={index} className="border-2 hover:border-primary transition-all duration-300">
                   <CardContent className="p-6 text-center space-y-4">
-                    <div className="w-12 h-12 mx-auto rounded-xl gradient-secondary shadow-subtle flex items-center justify-center">
-                      <info.icon className="h-6 w-6 text-white" />
+                    <div className="w-12 h-12 mx-auto rounded-lg bg-primary/10 flex items-center justify-center">
+                      <info.icon className="h-6 w-6 text-primary" />
                     </div>
                     <h3 className="font-semibold">{info.title}</h3>
                     {info.link ? (
                       <a 
                         href={info.link} 
-                        className="text-muted-foreground hover:text-secondary transition-colors block"
+                        className="text-muted-foreground hover:text-primary transition-colors block"
                       >
                         {info.content}
                       </a>
@@ -172,7 +172,7 @@ const Contact = () => {
                       />
                     </div>
 
-                    <Button type="submit" className="w-full group gradient-secondary shadow-medium hover:shadow-glow">
+                    <Button type="submit" className="w-full group">
                       Enviar Mensagem
                       <Send className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                     </Button>
