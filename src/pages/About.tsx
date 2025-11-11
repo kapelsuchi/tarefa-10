@@ -32,7 +32,7 @@ const About = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center space-y-6 animate-slide-up">
               <h1 className="text-4xl md:text-5xl font-bold">
-                Sobre a EcoRecicla
+                Sobre a Recycle
               </h1>
               <p className="text-lg text-muted-foreground">
                 Somos uma startup comprometida em revolucionar a forma como as pessoas encaram a reciclagem, 
@@ -47,10 +47,10 @@ const About = () => {
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-3 gap-8">
               {values.map((value, index) => (
-                <Card key={index} className="border-2 hover:border-primary transition-all duration-300 hover:shadow-medium">
+                <Card key={index} className="border-2 hover:border-secondary transition-all duration-300 hover-lift gradient-card">
                   <CardContent className="p-8 text-center space-y-4">
-                    <div className="w-16 h-16 mx-auto rounded-full bg-primary/10 flex items-center justify-center">
-                      <value.icon className="h-8 w-8 text-primary" />
+                    <div className="w-16 h-16 mx-auto rounded-full gradient-secondary shadow-subtle flex items-center justify-center">
+                      <value.icon className="h-8 w-8 text-white" />
                     </div>
                     <h3 className="text-2xl font-bold">{value.title}</h3>
                     <p className="text-muted-foreground">{value.description}</p>
@@ -69,7 +69,7 @@ const About = () => {
               
               <div className="space-y-6 text-lg text-muted-foreground">
                 <p>
-                  A EcoRecicla nasceu da observação de um problema crítico: milhões de garrafas PET e latas 
+                  A Recycle nasceu da observação de um problema crítico: milhões de garrafas PET e latas 
                   de alumínio são descartadas incorretamente todos os dias, causando impactos devastadores 
                   ao meio ambiente.
                 </p>
@@ -105,17 +105,17 @@ const About = () => {
             </div>
             
             <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-              <div className="text-center space-y-2">
-                <div className="text-4xl md:text-5xl font-bold text-primary">50K+</div>
-                <div className="text-muted-foreground">Itens Reciclados</div>
+              <div className="text-center space-y-2 p-6 rounded-2xl gradient-card hover-lift">
+                <div className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent gradient-primary">50K+</div>
+                <div className="text-muted-foreground font-medium">Itens Reciclados</div>
               </div>
-              <div className="text-center space-y-2">
-                <div className="text-4xl md:text-5xl font-bold text-primary">1000+</div>
-                <div className="text-muted-foreground">Usuários Ativos</div>
+              <div className="text-center space-y-2 p-6 rounded-2xl gradient-card hover-lift">
+                <div className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent gradient-secondary">1000+</div>
+                <div className="text-muted-foreground font-medium">Usuários Ativos</div>
               </div>
-              <div className="text-center space-y-2">
-                <div className="text-4xl md:text-5xl font-bold text-primary">15</div>
-                <div className="text-muted-foreground">Pontos de Coleta</div>
+              <div className="text-center space-y-2 p-6 rounded-2xl gradient-card hover-lift">
+                <div className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent gradient-accent">15</div>
+                <div className="text-muted-foreground font-medium">Pontos de Coleta</div>
               </div>
             </div>
           </div>

@@ -11,11 +11,11 @@ const Footer = () => {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <div className="rounded-lg bg-primary p-2">
-                <Recycle className="h-6 w-6 text-primary-foreground" />
+              <div className="rounded-xl bg-gradient-primary p-2.5 shadow-medium">
+                <Recycle className="h-6 w-6 text-white" />
               </div>
               <span className="text-xl font-bold bg-clip-text text-transparent gradient-primary">
-                EcoRecicla
+                Recycle
               </span>
             </div>
             <p className="text-sm text-muted-foreground">
@@ -78,7 +78,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-sm text-muted-foreground">
                 <Mail className="h-4 w-4 text-primary" />
-                contato@ecorecicla.com
+                contato@recycle.com
               </li>
               <li className="flex items-center gap-2 text-sm text-muted-foreground">
                 <Phone className="h-4 w-4 text-primary" />
@@ -94,7 +94,7 @@ const Footer = () => {
 
         <div className="border-t border-border mt-8 pt-8 text-center">
           <p className="text-sm text-muted-foreground">
-            © {currentYear} EcoRecicla. Todos os direitos reservados.
+            © {currentYear} Recycle. Todos os direitos reservados.
           </p>
         </div>
       </div>

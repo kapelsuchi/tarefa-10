@@ -66,11 +66,11 @@ const Index = () => {
               </div>
               
               <div className="relative animate-fade-in">
-                <div className="absolute inset-0 gradient-accent opacity-20 blur-3xl rounded-full"></div>
+                <div className="absolute inset-0 gradient-secondary opacity-30 blur-3xl rounded-full animate-bounce-gentle"></div>
                 <img 
                   src={heroImage} 
-                  alt="Máquina de reciclagem EcoRecicla"
-                  className="relative rounded-2xl shadow-strong w-full"
+                  alt="Máquina de reciclagem Recycle"
+                  className="relative rounded-2xl shadow-glow w-full hover-lift"
                 />
               </div>
             </div>
@@ -82,7 +82,7 @@ const Index = () => {
           <div className="container mx-auto px-4">
             <div className="text-center mb-12 space-y-4">
               <h2 className="text-3xl md:text-4xl font-bold">
-                Por que usar a EcoRecicla?
+                Por que usar a Recycle?
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                 Descubra como nossa tecnologia está revolucionando a reciclagem e criando um futuro mais verde.
@@ -93,11 +93,11 @@ const Index = () => {
               {features.map((feature, index) => (
                 <Card 
                   key={index} 
-                  className="border-2 hover:border-primary transition-all duration-300 hover:shadow-medium hover:-translate-y-1"
+                  className="border-2 hover:border-secondary transition-all duration-300 hover-lift gradient-card"
                 >
                   <CardContent className="p-6 space-y-4">
-                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                      <feature.icon className="h-6 w-6 text-primary" />
+                    <div className="w-12 h-12 rounded-xl gradient-secondary flex items-center justify-center shadow-subtle">
+                      <feature.icon className="h-6 w-6 text-white" />
                     </div>
                     <h3 className="text-xl font-semibold">{feature.title}</h3>
                     <p className="text-muted-foreground">{feature.description}</p>
@@ -119,7 +119,7 @@ const Index = () => {
                 Junte-se a milhares de pessoas que já estão contribuindo para um planeta mais sustentável.
               </p>
               <Link to="/auth">
-                <Button size="lg" className="group">
+                <Button size="lg" className="group gradient-secondary shadow-glow hover:shadow-strong">
                   Criar Conta Grátis
                   <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </Button>

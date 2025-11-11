@@ -20,19 +20,19 @@ const Profile = () => {
       icon: RecycleIcon,
       label: "Itens Reciclados",
       value: "247",
-      color: "text-primary",
+      gradient: "gradient-primary",
     },
     {
       icon: Award,
       label: "Pontos Acumulados",
       value: "1,240",
-      color: "text-accent",
+      gradient: "gradient-secondary",
     },
     {
       icon: TrendingUp,
       label: "Impacto Ambiental",
       value: "98kg CO₂",
-      color: "text-primary",
+      gradient: "gradient-accent",
     },
   ];
 
@@ -70,14 +70,14 @@ const Profile = () => {
             {/* Stats Grid */}
             <div className="grid md:grid-cols-3 gap-6">
               {stats.map((stat, index) => (
-                <Card key={index} className="border-2">
+                <Card key={index} className="border-2 hover:border-secondary transition-all duration-300 hover-lift gradient-card">
                   <CardContent className="p-6 text-center space-y-4">
-                    <div className={`w-12 h-12 mx-auto rounded-lg bg-primary/10 flex items-center justify-center`}>
-                      <stat.icon className={`h-6 w-6 ${stat.color}`} />
+                    <div className={`w-12 h-12 mx-auto rounded-xl ${stat.gradient} shadow-subtle flex items-center justify-center`}>
+                      <stat.icon className="h-6 w-6 text-white" />
                     </div>
                     <div>
-                      <div className="text-3xl font-bold">{stat.value}</div>
-                      <div className="text-sm text-muted-foreground">{stat.label}</div>
+                      <div className={`text-3xl font-bold bg-clip-text text-transparent ${stat.gradient}`}>{stat.value}</div>
+                      <div className="text-sm text-muted-foreground font-medium">{stat.label}</div>
                     </div>
                   </CardContent>
                 </Card>
@@ -122,7 +122,7 @@ const Profile = () => {
                     />
                   </div>
                   {isEditing && (
-                    <Button onClick={handleSave} className="w-full">
+                    <Button onClick={handleSave} className="w-full gradient-secondary shadow-medium">
                       Salvar Alterações
                     </Button>
                   )}
@@ -139,7 +139,7 @@ const Profile = () => {
                     {recentActivity.map((activity, index) => (
                       <div
                         key={index}
-                        className="flex items-center justify-between p-4 rounded-lg bg-muted"
+                        className="flex items-center justify-between p-4 rounded-lg gradient-card border border-border hover-lift"
                       >
                         <div>
                           <div className="font-semibold">{activity.type}</div>
@@ -148,7 +148,7 @@ const Profile = () => {
                           </div>
                         </div>
                         <div className="text-right">
-                          <div className="font-semibold text-primary">
+                          <div className="font-semibold bg-clip-text text-transparent gradient-secondary">
                             +{activity.points} pts
                           </div>
                           <div className="text-sm text-muted-foreground">
@@ -177,16 +177,18 @@ const Profile = () => {
                   ].map((achievement, index) => (
                     <div
                       key={index}
-                      className={`p-4 rounded-lg text-center ${
+                      className={`p-4 rounded-xl text-center transition-all duration-300 ${
                         achievement.unlocked
-                          ? "bg-primary/10 border-2 border-primary"
+                          ? "gradient-card border-2 border-secondary shadow-medium hover-lift"
                           : "bg-muted opacity-50"
                       }`}
                     >
-                      <div className="w-12 h-12 mx-auto mb-2 rounded-full bg-primary/20 flex items-center justify-center">
+                      <div className={`w-12 h-12 mx-auto mb-2 rounded-full flex items-center justify-center ${
+                        achievement.unlocked ? "gradient-secondary shadow-subtle" : "bg-muted-foreground/20"
+                      }`}>
                         <Award
                           className={`h-6 w-6 ${
-                            achievement.unlocked ? "text-primary" : "text-muted-foreground"
+                            achievement.unlocked ? "text-white" : "text-muted-foreground"
                           }`}
                         />
                       </div>
